@@ -1,0 +1,35 @@
+def print_ticker_investment_share(percentage_allocated, total_investment, ticker_name):
+    print(f"invest {percentage_allocated * total_investment} in {ticker_name} ticker name")
+
+voo_percentage_share = 0.3
+vgt_percentage_share = 0.125
+qqq_percentage_share = 0.125
+tan_percentage_share = 0.1
+icln_percentage_share = 0.05
+pbw_percentage_share = 0.05
+schd_percentage_share = 0.1
+sark_percentage_share = 0.075
+arkk_percentage_share = 0.075
+
+sum_tickers_percentage_share = voo_percentage_share + vgt_percentage_share + qqq_percentage_share   +     \
+                         tan_percentage_share + icln_percentage_share + pbw_percentage_share  +           \
+                         schd_percentage_share + sark_percentage_share + arkk_percentage_share
+
+
+def investment_allocation_calculator(total_investment):
+    if sum_tickers_percentage_share > 1.0001:
+        raise Exception(f"the percentages do not add up and is equal to {sum_tickers_percentage_share}")
+    else:
+        print_ticker_investment_share(voo_percentage_share, total_investment, "voo")
+        print_ticker_investment_share(vgt_percentage_share, total_investment, "vgt")
+        print_ticker_investment_share(qqq_percentage_share, total_investment, "qqq")
+        print_ticker_investment_share(tan_percentage_share, total_investment, "tan")
+        print_ticker_investment_share(icln_percentage_share, total_investment, "icln")
+        print_ticker_investment_share(pbw_percentage_share, total_investment, "pbw")
+        print_ticker_investment_share(schd_percentage_share, total_investment, "schd")
+        print_ticker_investment_share(sark_percentage_share, total_investment, "sark")
+        print_ticker_investment_share(arkk_percentage_share, total_investment, "arkk")
+
+
+
+investment_allocation_calculator(500)
